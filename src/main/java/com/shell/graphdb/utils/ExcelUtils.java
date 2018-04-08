@@ -33,7 +33,10 @@ public class ExcelUtils {
 	private Map<String, Integer> headerIndexmap = new HashMap<>();
 
 	public ExcelUtils() {
-
+		File output = new File("out");
+		if(!output.exists()){
+			output.mkdirs();
+		}
 	}
 
 	public void createVertexFile(List<VertexListData> vertexListData) {
